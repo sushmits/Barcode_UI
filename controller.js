@@ -1,9 +1,17 @@
 
-function updateSlider(slideAmount , sliderAmountVar) {
-	var sliderDiv = document.getElementById(sliderAmountVar);
-	sliderDiv.innerHTML = slideAmount;
+
+function updateTextInput(slideAmount , sliderAmountVar) {
+	var sliderInput = document.getElementById(sliderAmountVar);
+	sliderInput.value = slideAmount;
 
 }
+
+function updateSlider(slideAmount , sliderAmountVar) {
+	var slider = document.getElementById(sliderAmountVar);
+	slider.value = slideAmount;
+
+}
+
 
 
 function onclickDistanceMatrix()
