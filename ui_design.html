@@ -20,7 +20,7 @@
     <h1 style="font-family:Verdana; "> Barcode Caddy </h1>
   </div>
 
-  <div para="para" style="padding-left:25px; " >
+  <div class="para" style="padding-left:25px; " >
     <p>
       Barcode Caddy selects an optimum set of barcodes for your sample pool. Custom (or pre-selected) barcode sets can also be validated and/or added while generating new sets. 
     </p>
@@ -35,7 +35,7 @@
     <br>
     <br>
     <br>
-    <img id="img_graph" src="giphy.gif">
+    <img id="img_graph" src="http://girihlet.com/ravi/web/barcode_diversity/bargraph.cgi?perf=tmp/fig5431.perf">
     <br>
     <a href="" style="float:right; padding-right: 10px;font-size: 20px;"> Barcodes</a>
     <br>
@@ -43,6 +43,7 @@
     <a href = "" style="float:right; padding-right: 10px;font-size: 20px;" onclick="onclickDistanceMatrix()">Distance Matrix </a>
   </div>
 
+  <form action="BarcodeCaddyServlet" method="GET" >
   <div style="width:50%;">           
     <table class="table table-bordered">
       <thead>
@@ -61,7 +62,7 @@
               <input type="range" min="0" max="24" step ="1" value="0" class="slider" id="myRange1" onchange="updateTextInput(this.value, 'sliderAmount1' ) ">
             </div>
             <br>
-            <input type="number" min="0" max="24" step ="1" value="0"  id="sliderAmount1" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange1') " ></input>
+            <input type="number" min="0" max="24" step ="1" value="0" name="sliderAmount1" id="sliderAmount1" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange1') " >
           </td>
         </tr>
 
@@ -73,7 +74,7 @@
               <input type="range" min="0" max="12" step ="1"  value="0" class="slider" id="myRange2" onchange="updateTextInput(this.value, 'sliderAmount2' ) ">
             </div>
             <br>
-            <input type="number"  min="0" max="12" step ="1"  value="0" id="sliderAmount2" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange2') "></input>
+            <input type="number"  min="0" max="12" step ="1"  value="0" name="sliderAmount2" id="sliderAmount2" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange2') ">
           </td>
         </tr>
         <tr>
@@ -84,7 +85,7 @@
               <input type="range" min="0" max="12" step ="1"  value="0" class="slider" id="myRange3" onchange="updateTextInput(this.value, 'sliderAmount3' ) ">
             </div>
             <br>
-            <input type="number"  min="0" max="12" step ="1"  value="0" id="sliderAmount3" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange3')  "></input>
+            <input type="number"  min="0" max="12" step ="1"  value="0" name="sliderAmount3" id="sliderAmount3" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange3')  ">
           </td>
         </tr>
         <tr>
@@ -95,7 +96,7 @@
               <input type="range" min="0" max="48"  step ="1" value="0" class="slider" id="myRange4" onchange="updateTextInput(this.value, 'sliderAmount4' ) ">
             </div>
             <br>
-            <input type="number"  min="0" max="48"  step ="1" value="0" id="sliderAmount4" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange4' ) "></input>
+            <input type="number"  min="0" max="48"  step ="1" value="0" name="sliderAmount4" id="sliderAmount4" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange4' ) ">
           </td>
         </tr>
         <tr>
@@ -106,7 +107,7 @@
               <input type="range" min="0" max="96"  step ="1" value="0" class="slider" id="myRange5" onchange="updateTextInput(this.value, 'sliderAmount5' ) ">
             </div>
             <br>
-            <input type="number"  min="0" max="96"  step ="1" value="0" id="sliderAmount5" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange5')  "></input>
+            <input type="number"  min="0" max="96"  step ="1" value="0"  name="sliderAmount5" id="sliderAmount5" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange5')  ">
           </td>
         </tr>
 
@@ -118,7 +119,7 @@
               <input type="range" min="0" max="15"  step ="1"  value="0" class="slider" id="myRange6" onchange="updateTextInput(this.value, 'sliderAmount6' ) ">
             </div>
             <br>
-            <input type="number" min="0" max="15"  step ="1"  value="0"  id="sliderAmount6" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange6')  "></input>
+            <input type="number" min="0" max="15"  step ="1"  value="0"   name="sliderAmount6" id="sliderAmount6" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange6')  ">
           </td>
         </tr>
 
@@ -130,7 +131,7 @@
               <input type="range" min="0" max="15"  step ="1"  value="0" class="slider" id="myRange7" onchange="updateTextInput(this.value, 'sliderAmount7' ) ">
             </div>
             <br>
-            <input type="number" min="0" max="15"  step ="1"  value="0"  id="sliderAmount7" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange7')  "></input>
+            <input type="number" min="0" max="15"  step ="1"  value="0" name="sliderAmount7"   id="sliderAmount7" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange7')  ">
           </td>
         </tr>
 
@@ -142,7 +143,7 @@
               <input type="range" min="0" max="16"  step ="1" value="0" class="slider" id="myRange8" onchange="updateTextInput(this.value, 'sliderAmount8' ) ">
             </div>
             <br>
-            <input type="number" min="0" max="16"  step ="1" value="0"  id="sliderAmount8" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange8')  "></input>
+            <input type="number" min="0" max="16"  step ="1" value="0"  name="sliderAmount8"  id="sliderAmount8" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange8')  ">
           </td>
         </tr>
 
@@ -154,7 +155,7 @@
               <input type="range" min="0" max="16" step="1" value="0" class="slider" id="myRange9" onchange="updateTextInput(this.value, 'sliderAmount9' ) ">
             </div>
             <br>
-            <input type="number"  min="0" max="16" step="1" value="0" id="sliderAmount9" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange9')  "></input>
+            <input type="number"  min="0" max="16" step="1" value="0"  name="sliderAmount9" id="sliderAmount9" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange9')  ">
           </td>
         </tr>
 
@@ -166,7 +167,7 @@
               <input type="range" min="0" max="96"  step ="1" value="0" class="slider" id="myRange10" onchange="updateTextInput(this.value, 'sliderAmount10' ) ">
             </div>
             <br>
-            <input type="number" min="0" max="96"  step ="1" value="0"  id="sliderAmount10" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange10')  "></input>
+            <input type="number" min="0" max="96"  step ="1" value="0"  name="sliderAmount10"  id="sliderAmount10" style="float:right;width:50px;" onchange="updateSlider(this.value, 'myRange10')  ">
           </td>
         </tr>
 
@@ -175,7 +176,7 @@
           (as sequences (space/comma separated) ) </td>
           <td> - </td>
           <td>
-            <input type="text" id="myText" > 
+            <input value="-" type="text" name="Preselectedbarcodes" id="Preselectedbarcodes" > 
           </td>
         </tr>
 
@@ -186,7 +187,7 @@
   <div class="button_div" style="padding-left: 25px; ">
     <button class="submit_button" onclick="updateImage()">Submit</button>
   </div>
-
+  </form>
   <br>
   <div style="padding-left: 25px; ">
     <a href="mailto:ravi@girihlet.com"> Send Feedback </a>

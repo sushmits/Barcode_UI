@@ -33,5 +33,5 @@ function updateImage()
 		ran=0;
 	}
 
-		$("#img_graph").attr("src","second"+ran+".gif");
+		$("#img_graph").attr("src","http://girihlet.com/ravi/web/barcode_diversity/bargraph.cgi?perf=tmp/fig5431.perf");
 }
