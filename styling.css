@@ -4,7 +4,22 @@ body {margin:0;}
     width: 30%;
     background-color: #555;
     float:right;
-    height: 20px;
+    height: 25px;
+}
+
+.icon-bar a {
+    float: left;
+    width: 33%;
+    text-align: center;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+}
+
+.icon-bar a:hover {
+    background-color: black;
+    color: aqua;
 }
 
 .heading {
@@ -23,31 +38,16 @@ body {margin:0;}
 
 .para {
     width: 100%;
-    background-color: white ;
+    /*background-color: white ;*/
     height: 30px;
 }
 
 .para  p{
     float: left;
-    text-align: center;
-    padding: 12px 0;
-    color: white;
-    font-size: 20px;
-}
-
-.icon-bar a {
-    float: left;
-    width: 33%;
-    text-align: center;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 10px;
-}
-
-.icon-bar a:hover {
-    background-color: black;
-    color: aqua;
+    text-align: left;
+    /*padding: 12px 0;*/
+    color: black;
+    font-size: 15px;
 }
 
 .active {
@@ -57,14 +57,13 @@ body {margin:0;}
 .pick_barcode {
     width: 50%;
     background-color: LightSeaGreen ;
-    overflow: auto;
-    padding-left:25px;
+    padding-left:25px;  
 }
 
 .pick_barcode h3 {
-    text-align: centre;
     color: white;
     font-size: 15px;
+    font-style: Verdana ;
 }
 
 /* Slider styling*/
@@ -114,14 +113,14 @@ body {margin:0;}
 }
 
 .submit_button {
-    background-color: DodgerBlue ; 
+    background-color: LightSeaGreen ; 
     color: white; 
-    border: 2px solid grey;
+    border: 2px solid black;
 }
 
 .submit_button:hover {
-    background-color: MediumSpringGreen ;
-    color: black;
+    background-color: coral ;
+    color: white;
     border: 2px solid black;
 }
 
@@ -142,3 +141,24 @@ img {
     padding-bottom: 25px;
     float:right;
 }
+
+th {
+    font-size: 18px;
+}
+
+#selectionTable tbody tr td:first-child a {
+    font-size: 18px;
+}
+
+#selectionTable tbody tr td:nth-child(2) {
+   font-size: 18px; 
+}
+
+table {
+    width:50%;
+}
+
+.slidercontain{
+    width:60%;
+}
+
